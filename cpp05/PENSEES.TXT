@@ -1,0 +1,8 @@
+{
+	Intern someRandomIntern;
+	Form* rrf;
+
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+}
+
+makeForm renvoie un objet de type "STR 1" s'il existe, avec comme target STR 2.

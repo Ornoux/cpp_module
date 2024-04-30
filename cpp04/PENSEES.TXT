@@ -1,0 +1,21 @@
+-	CHARACTER --> possède 4 slots de SORTS (Materia)
+
+Constructor --> set l'invetaire à NULL;
+
+equip() --> rempli le premier slot vide
+
+Si on equip() un SORT dans un slot rempli --> rien ne se passe
+unequip() quelque chose qui n'existe pas --> rien ne se passe
+
+
+
+
+
+
+
+
+
+
+
+
+

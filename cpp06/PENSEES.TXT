@@ -1,0 +1,57 @@
+
+Detecter le type passé en parametre ----> puis le convertir en SON type --> puis dans les autres types :
+
+EX : ./convert "c" 
+
+std::string == "c"
+
+---> char: c
+puis convert c to float/double/int
+
+donc --> std::string to char
+		 std::string to INT
+		 std::string to FLOAT
+		 std::string to DOUBLE
+
+		 puis char to
+
+std::string t
+
+
+
+EX01
+
+static class Serializer -->
+
+- Methode 1 : uintptr_t serialize(data* ptr)
+
+----> convertit ptr to UNSIGNED INT (uintptr_t)
+
+- Methode 2 : Data* deserialize(uintptr_t raw)
+
+----> convertit UINTPTR_T to Data*
+
+EN SOMME :
+
+si on utilise serialize() sur l'adresse de l'objet Data et qu'on renvoie sa valeur
+à deserialize(), la valeur de deserialize doit etre egale au ptr de base.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
