@@ -1,0 +1,54 @@
+BTC : container MAP
+RPN : STACK
+PMERGEME : VECTOR/DEQUE
+
+Les containers : 
+
+
+- MAP :     Les éléments sont stockés et accessibles par leur clé.
+            std::map<std::string, int nb> myMap;
+
+            myMap["Poil"] = 8;
+
+            std::cout << "Valeur de Poil : " << myMap["Poil"];
+
+
+- STACK :   Les éléments sont ajoutés et supprimés uniquement à partir du sommet de la pile.
+            Le dernier élément ajouté est le premier à être retiré.
+
+            Fonction : push, pop, top, et empty
+
+BTC : 
+
+On a une data_base.csv qui comporte --> dates + valeur du bitcoin a cette date.
+                                        sous ce format : 2009-03-09,0
+                                                         YYYY-MM-DD,VALUE  DATE MAX : 2022-03-29
+                                                                           DATE MIN : 2009-01-02
+idee : -> stocker cette base de donnee dans un container std::map<std::string, int> mappy
+       -> std::cout << mappy["2022-03-29"] retourne 47115.93;
+
+CHECK ? : CHECK
+
+On a desormais notre data base stockee dans notre std::map.
+
+--------FILE.TXT-------------------------------------OUTPUT------------------
+|                                                                           |
+|    date | value                                                           |
+|    2011-01-03 | 3                       2011-01-03 => 3 = 0.9             |
+|    2011-01-03 | 2                       2011-01-03 => 2 = 0.6             |
+|    2011-01-03 | 1                       2011-01-03 => 1 = 0.3             |
+|    2011-01-03 | 1.2                     2011-01-03 => 1.2 = 0.36          |
+|    2011-01-09 | 1                       2011-01-09 => 1 = 0.32            |
+|    2012-01-11 | -1                      Error: not a positive number.     |
+|    2001-42-42                           Error: bad input => 2001-42-42    |
+|    2012-01-11 | 1                       2012-01-11 => 1 = 7.1             |    
+|    2012-01-11 | 2147483648              Error: too large a number.        |
+-----------------------------------------------------------------------------
+
+- Respecter le format YYYY-MM-DD | value
+--> fonction qui check la date : CONVERT Y / M / D
+                                 Y >=
+
+
+Value :  0 <= value <= 1000
+Date :
