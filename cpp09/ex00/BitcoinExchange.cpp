@@ -6,7 +6,7 @@
 /*   By: npatron <npatron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:08:47 by npatron           #+#    #+#             */
-/*   Updated: 2024/05/03 17:19:13 by npatron          ###   ########.fr       */
+/*   Updated: 2024/05/05 19:14:12 by npatron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -232,15 +232,10 @@ std::string BitcoinExchange::change_date_to_anterior(std::string date)
 			month_value = 12;
 			sp << month_value;
 			month = sp.str();
-			if (year_value < 2009)
-				return ("NULL");
-			else
-			{
-				year_value--;
-				std::stringstream ss;
-				ss << year_value;
-				year = ss.str();
-			}
+			year_value--;
+			std::stringstream ss;
+			ss << year_value;
+			year = ss.str();
 			final_date = year + "-" + month + "-" + day;
 			return (final_date);
 		}
@@ -312,8 +307,16 @@ bool    BitcoinExchange::good_format_date_csv(std::string date)
 	month_value = atoi(month.c_str());
 	day_value = atoi(day.c_str());
 	
-	if (year_value >= 9999 || year_value <= 0)
+	if (year_value <= 2008)
+	{
+		std::cout << "Wooow.. Bitcoin is born in 2009" << std::endl;
 		return (false);
+	}
+	if (year_value >= 2025)
+	{
+		std::cout << "Wooow.. We are in 2024" << std::endl;
+		return (false);
+	}
 	if (month_value > 12 || month_value <= 0)
 		return (false);
 	if (day_value > 31 || day_value <= 0)
@@ -357,8 +360,16 @@ bool    BitcoinExchange::good_format_date(std::string date)
 	month_value = atoi(month.c_str());
 	day_value = atoi(day.c_str());
 	
-	if (year_value >= 9999 || year_value <= 0)
+	if (year_value <= 2008)
+	{
+		std::cout << "Wooow.. Bitcoin is born in 2009" << std::endl;
 		return (false);
+	}
+	if (year_value >= 2025)
+	{
+		std::cout << "Wooow.. We are in 2024" << std::endl;
+		return (false);
+	}
 	if (month_value > 12 || month_value <= 0)
 		return (false);
 	if (day_value > 31 || day_value <= 0)
@@ -413,8 +424,8 @@ bool	BitcoinExchange::check_value_csv(std::string line)
 		return (false);
 	std::istringstream iss(value);
 	iss >> nb;
-	if (nb > INT_MAX || nb < 0)
-		return (false);
+	 if ((int)nb > INT_MAX || nb < 0)
+	 	return (false);
 	return (true);
 }
 

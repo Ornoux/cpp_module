@@ -52,3 +52,26 @@ On a desormais notre data base stockee dans notre std::map.
 
 Value :  0 <= value <= 1000
 Date :
+
+-----------------------------------------------------------------------------------------------
+
+RPN : Reverse Polish Notation
+
+- Programme prend en parametre une expression mathematique en notation polonaise inversee.
+- Tous les chiffres -> ( < 10 )
+- On doit gerer -> ( * + - /)
+
+Parsing : 
+
+- Nombre inferieur a 10
+- (N - 1) opérateurs
+
+
+./RPN "1 2 4 5 - * +
+
+
+
+
+
+
+
