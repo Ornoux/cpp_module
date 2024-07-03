@@ -6,7 +6,7 @@
 /*   By: npatron <npatron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 16:38:16 by npatron           #+#    #+#             */
-/*   Updated: 2024/04/25 18:37:08 by npatron          ###   ########.fr       */
+/*   Updated: 2024/05/17 19:49:51 by npatron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,31 @@
 #include <iostream>
 
 template<typename T>
-void	iter(uintptr_t address, int len, void function());
+void	iter(T *ptr, int len, void function(const T&) )
+{
+	int	i;
 	
+	i = 0;
+	while (i < len)
+	{
+		function(ptr[i]);
+		i++;
+	}
+	return ;	
+}
 
-
+template<typename T>
+void	iter(T *ptr, int len, void function(T&))
+{
+	int	i;
+	
+	i = 0;
+	while (i < len)
+	{
+		function(ptr[i]);
+		i++;
+	}
+	return ;	
+}
 
 #endif

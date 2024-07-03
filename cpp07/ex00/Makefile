@@ -6,14 +6,13 @@
 #    By: npatron <npatron@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 14:33:48 by npatron           #+#    #+#              #
-#    Updated: 2024/04/25 14:28:14 by npatron          ###   ########.fr        #
+#    Updated: 2024/05/17 19:04:31 by npatron          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	SMM
 
 SRC =	main.cpp \
-		Templates.cpp \
 
 
 OBJ = $(SRC:.cpp=.o)

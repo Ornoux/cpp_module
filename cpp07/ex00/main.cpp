@@ -6,7 +6,7 @@
 /*   By: npatron <npatron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 14:29:07 by npatron           #+#    #+#             */
-/*   Updated: 2024/04/25 15:58:39 by npatron          ###   ########.fr       */
+/*   Updated: 2024/05/17 19:09:29 by npatron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int main(int argc, char **av)
 {
 	(void)argc, (void)av;
 	
-	/*int a;
+	int a;
 	int b;
 
 	a = 10;
@@ -86,24 +86,6 @@ int main(int argc, char **av)
 	std::cout << "USE OF 'MAX'\n\n";
 	
 	std::cout << "l = " << l << " g = " << g << std::endl;
-	std::cout << "max between l and b is : " << max<int>(l, g);*/
-
-	int a = 2;
-	int b = 3;
-
-	swapmine( a, b );
-	std::cout << "teub" << std::endl;
-	
-	std::cout << "a = " << a << ", b = " << b << std::endl;
-	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-
-	std::string c = "chaine1";
-	std::string d = "chaine2";
-	
-	swapmine(c, d);
-	
-	std::cout << "c = " << c << ", d = " << d << std::endl;
-	std::cout << "min( c, d ) = " << ::min(c, d) << std::endl;
-	std::cout << "max( c, d ) = " << ::max(c, d) << std::endl;
+	std::cout << "max between l and b is : " << max<int>(l, g);
+	return (0);
 }
